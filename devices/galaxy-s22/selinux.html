@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Análise SELinux – Galaxy S22</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #1e1e1e;
+      color: #e0e0e0;
+      margin: 0;
+      display: flex;
+    }
+    nav {
+      width: 220px;
+      background-color: #121212;
+      padding: 30px 20px;
+      height: 100vh;
+      position: sticky;
+      top: 0;
+    }
+    nav h2 {
+      font-size: 1.2em;
+      color: #00bcd4;
+      margin-bottom: 20px;
+    }
+    nav a {
+      display: block;
+      color: #ccc;
+      text-decoration: none;
+      margin-bottom: 12px;
+    }
+    nav a:hover {
+      color: #00e5ff;
+    }
+    main {
+      flex: 1;
+      padding: 40px;
+    }
+    h1 {
+      font-size: 2em;
+      color: #00bcd4;
+      margin-bottom: 10px;
+    }
+    h2 {
+      color: #ff9800;
+      margin-top: 40px;
+      border-bottom: 2px solid #333;
+      padding-bottom: 5px;
+    }
+    p, li {
+      font-size: 1em;
+      line-height: 1.6;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    code {
+      background-color: #333;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 0.95em;
+    }
+    .file-links a {
+      display: inline-block;
+      margin-right: 15px;
+      margin-top: 10px;
+      color: #00bcd4;
+    }
+    .file-links a:hover {
+      color: #00e5ff;
+    }
+    footer {
+      margin-top: 60px;
+      font-size: 0.9em;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <h2>🔍 Navegação</h2>
+  <a href="painel.html">← Voltar ao painel</a>
+  <a href="#contexto">Contexto</a>
+  <a href="#comando">Comando usado</a>
+  <a href="#resultado">Resultado</a>
+  <a href="#risco">Risco técnico</a>
+  <a href="#recomendacao">Recomendação</a>
+  <a href="#arquivos">Arquivos relacionados</a>
+</nav>
+
+<main>
+  <h1>SELinux permissivo no boot</h1>
+  <p><strong>Dispositivo:</strong> Galaxy S22 (SM-S901E) | <strong>Data:</strong> 23/09/2025</p>
+
+  <h2 id="contexto">📌 Contexto</h2>
+  <p>O SELinux é um sistema de controle de acesso obrigatório que protege o Android contra ações não autorizadas entre processos. Ele deve estar em modo <code>enforcing</code> desde o boot para garantir que todas as políticas de segurança sejam aplicadas.</p>
+
+  <h2 id="comando">🧪 Comando usado</h2>
+  <ul>
+    <li><code>adb shell getenforce</code></li>
+    <li><code>adb shell dmesg | grep -i selinux</code></li>
+  </ul>
+
+  <h2 id="resultado">📋 Resultado</h2>
+  <p>Durante a coleta inicial, o comando <code>getenforce</code> retornou <strong>Permissive</strong>, indicando que o SELinux não estava aplicando suas políticas. Após reinicialização e ajustes, voltou para <strong>Enforcing</strong>.</p>
+
+  <h2 id="risco">⚠️ Risco técnico</h2>
+  <ul>
+    <li>Processos podem acessar recursos sem restrição durante o boot</li>
+    <li>Apps com UID privilegiado podem escapar das políticas de isolamento</li>
+    <li>Possível vetor para rootkits ou persistência de malware</li>
+  </ul>
+
+  <h2 id="recomendacao">✅ Recomendação</h2>
+  <ul>
+    <li>Monitorar o estado do SELinux após cada boot</li>
+    <li>Validar com <code>getenforce</code> e <code>logcat</code> em tempo real</li>
+    <li>Evitar apps que exigem permissive mode</li>
+    <li>Auditar apps com UID 1000–1039</li>
+  </ul>
+
+  <h2 id="arquivos">📁 Arquivos relacionados</h2>
+  <div class="file-links">
+    <a href="dados/logs/selinux.log">selinux.log</a>
+    <a href="dados/extracoes/getprop.txt">getprop.txt</a>
+    <a href="dados/scripts/analise-selinux.sh">Script de análise</a>
+  </div>
+
+  <footer>
+    Projeto XinaBox | Análise SELinux | Última atualização: 23/09/2025
+  </footer>
+</main>
+
+</body>
+</html>

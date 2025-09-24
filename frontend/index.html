@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>XinaBox – Centro de Comando</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #1e1e1e;
+      color: #e0e0e0;
+      margin: 0;
+      padding: 30px;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    h1 {
+      font-size: 2.5em;
+      color: #00bcd4;
+    }
+    h2 {
+      color: #ff9800;
+      font-size: 1.5em;
+      margin-top: 40px;
+      border-bottom: 2px solid #333;
+      padding-bottom: 5px;
+    }
+    .device-card {
+      background-color: #2a2a2a;
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.4);
+    }
+    .device-card h3 {
+      margin-top: 0;
+      color: #00e676;
+    }
+    .status {
+      font-size: 0.9em;
+      color: #ccc;
+    }
+    .progress-bar {
+      background-color: #444;
+      border-radius: 5px;
+      overflow: hidden;
+      margin: 10px 0;
+    }
+    .progress {
+      height: 10px;
+      background-color: #00e676;
+    }
+    a {
+      color: #00bcd4;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 10px;
+    }
+    a:hover {
+      color: #00e5ff;
+    }
+    footer {
+      text-align: center;
+      margin-top: 50px;
+      font-size: 0.9em;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>🛡️ XinaBox – Centro de Comando</h1>
+  <p><strong>Investigadora:</strong> Maria Amelia Marques, PhD em Cyber Investigação Anti-Chines</p>
+  <p><strong>Início:</strong> 23/09/2025</p>
+</header>
+
+<h2>📱 Dispositivos Auditados</h2>
+
+<div class="device-card">
+  <h3>Galaxy S22 (SM-S901E)</h3>
+  <p class="status">Relatório inicial completo | 3/5 pontos críticos analisados | 5/5 seções vivas iniciadas</p>
+  <div class="progress-bar"><div class="progress" style="width: 60%;"></div></div>
+  <a href="dispositivos/galaxy-s22/relatorio-inicial.html">📄 Ver relatório técnico</a>
+  <a href="dispositivos/galaxy-s22/painel.html">🔍 Acessar painel</a>
+  <a href="dispositivos/galaxy-s22/auditoria/seguranca.html">🔐 Segurança</a>
+  <a href="dispositivos/galaxy-s22/auditoria/rede.html">🌐 Rede</a>
+  <a href="dispositivos/galaxy-s22/auditoria/desempenho.html">🧠 Desempenho</a>
+  <a href="dispositivos/galaxy-s22/auditoria/multimidia.html">🎮 Multimídia</a>
+  <a href="dispositivos/galaxy-s22/auditoria/sistema.html">📦 Sistema</a>
+</div>
+
+<div class="device-card">
+  <h3>Tablet da Mãe</h3>
+  <p class="status">Painel em construção | 0/5 pontos críticos analisados</p>
+  <div class="progress-bar"><div class="progress" style="width: 0%;"></div></div>
+  <a href="dispositivos/tablet-mae/painel.html">🔍 Acessar painel</a>
+</div>
+
+<h2>📂 Auditoria em andamento</h2>
+<p class="status">Acompanhe o progresso técnico por área:</p>
+<ul>
+  <li><a href="dispositivos/galaxy-s22/auditoria/seguranca.html">🔐 Segurança & Boot</a></li>
+  <li><a href="dispositivos/galaxy-s22/auditoria/rede.html">🌐 Rede & Firewall</a></li>
+  <li><a href="dispositivos/galaxy-s22/auditoria/desempenho.html">🧠 Desempenho & Memória</a></li>
+  <li><a href="dispositivos/galaxy-s22/auditoria/multimidia.html">🎮 Gráficos & Multimídia</a></li>
+  <li><a href="dispositivos/galaxy-s22/auditoria/sistema.html">📦 Sistema & Build</a></li>
+</ul>
+
+<h2>➕ Adicionar novo dispositivo</h2>
+<p class="status">Crie uma nova pasta em <code>/dispositivos/</code> e replique a estrutura de painel, relatório e auditoria.</p>
+
+<footer>
+  Projeto XinaBox | Centro de Comando | Última atualização: 23/09/2025<br>
+  Fonte primária: relatório-inicial.html | Auditoria em tempo real via seções vivas
+</footer>
+
+</body>
+</html>
+

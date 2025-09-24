@@ -1,0 +1,37 @@
+# Node / Frontend
+node_modules/
+dist/
+build/
+
+# Python / Backend
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+.venv/
+env/
+venv/
+
+# Logs e relatórios temporários
+*.log
+*.tmp
+*.bak
+*.swp
+*.swo
+.DS_Store
+
+# VS Code
+.vscode/
+*.code-workspace
+
+# Sistema
+Thumbs.db
+desktop.ini
+
+# Saídas do projeto (não versionar brutos)
+devices/*/raw/
+reports/*.pdf
+reports/*.json
+
+# Se quiser versionar exemplos, use devices/demo/ em vez de dados reais

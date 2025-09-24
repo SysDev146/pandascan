@@ -1,0 +1,48 @@
+{
+  "folders": [
+    {
+      "path": "."
+    },
+    {
+      "path": "frontend"
+    },
+    {
+      "path": "backend"
+    },
+    {
+      "path": "devices"
+    },
+    {
+      "path": "docs"
+    },
+    {
+      "path": "reports"
+    }
+  ],
+  "settings": {
+    "files.autoSave": "afterDelay",
+    "files.autoSaveDelay": 2000,
+    "editor.fontFamily": "Fira Code, Consolas, 'Courier New', monospace",
+    "editor.fontLigatures": true,
+    "editor.minimap.enabled": true,
+    "editor.tabSize": 2,
+    "files.exclude": {
+      "**/.git": true,
+      "**/.DS_Store": true,
+      "**/__pycache__": true
+    },
+    "explorer.compactFolders": false,
+    "workbench.colorTheme": "Default Dark Modern",
+    "workbench.startupEditor": "readme"
+  },
+  "extensions": {
+    "recommendations": [
+      "ms-vscode.live-server",
+      "yzhang.markdown-all-in-one",
+      "donjayamanne.githistory",
+      "mhutchie.git-graph",
+      "formulahendry.auto-close-tag",
+      "formulahendry.auto-rename-tag"
+    ]
+  }
+}
