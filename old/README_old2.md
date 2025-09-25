@@ -153,10 +153,8 @@ Ideias soltas que podem se conectar a qualquer módulo. Cada item pode ser marca
 
 [ ] Ajustar módulo existente
 
-[ ]Sim, o NetGuard pode estar mascarando ou influenciando vários dos sinais que você está investigando. Isso não significa que há algo errado — mas significa que você precisa considerar o NetGuard como parte do ambiente monitorado, e não como neutro.
+[ ] Sim, o NetGuard pode estar mascarando ou influenciando vários dos sinais que você está investigando. Isso não significa que há algo errado — mas significa que você precisa considerar o NetGuard como parte do ambiente monitorado, e não como neutro.
 Se quiser, posso te ajudar a montar um perfil de influência do NetGuard no sistema e sugerir formas de isolar o comportamento real dos apps. Quer seguir por esse caminho?
-
-
 
 Anexo B - Estrutura organizacional atual
 

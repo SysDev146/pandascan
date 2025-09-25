@@ -1,3 +1,12 @@
+🧩 O que vai conter:
+- 8 slides temáticos: Segurança, Rede, Desempenho, Multimídia, Sistema, Pontos Críticos, Próximos Passos, Título
+- Design técnico: fundo escuro ou neutro, ícones de segurança, rede, chip, lupa, etc.
+- Resumo visual por slide: com bullets curtos, emojis técnicos e destaques em cores
+- Pronto para exportar: você só vai copiar e colar ou importar direto
+📌 Próxima entrega: “Apresentação Visual – Auditoria Galaxy S22”
+Se quiser, posso incluir uma capa com seu nome, data, e título da investigação. Quer que eu personalize com isso também?
+
+
 🎯 Slide 1: Título
 Auditoria Técnica – Galaxy S22 (SM-S901E)
 📅 Coleta: 23/09/2025 | 🌍 Origem: ZTO (Brasil)

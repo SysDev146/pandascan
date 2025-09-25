@@ -8,7 +8,7 @@
 │   │   ├── selinux.html               → Análise detalhada: SELinux
 │   │   ├── netguard.html              → Análise detalhada: NetGuard
 │   │   ├── memoria.html               → Análise detalhada: Políticas de memória
-│   │   └── telemetria.html           → Análise detalhada: Telemetria
+│   │   └── telemetria.html            → Análise detalhada: Telemetria
 │   └── tablet-mae/
 │       └── painel.html                → Painel do dispositivo da mãe
 │

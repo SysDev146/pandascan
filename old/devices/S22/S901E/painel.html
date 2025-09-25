@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Painel Galaxy S22 – XinaBox</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #1e1e1e;
+      color: #e0e0e0;
+      margin: 0;
+      padding: 30px;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    h1 {
+      font-size: 2.2em;
+      color: #00bcd4;
+    }
+    h2 {
+      color: #ff9800;
+      font-size: 1.4em;
+      margin-top: 40px;
+      border-bottom: 2px solid #333;
+      padding-bottom: 5px;
+    }
+    .card {
+      background-color: #2a2a2a;
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.4);
+    }
+    label {
+      display: flex;
+      align-items: center;
+      margin-bottom: 8px;
+    }
+    input[type="checkbox"] {
+      margin-right: 10px;
+      transform: scale(1.2);
+    }
+    .resumo {
+      font-size: 0.9em;
+      color: #ccc;
+      margin-left: 25px;
+      margin-bottom: 10px;
+      font-style: italic;
+    }
+    a {
+      color: #00bcd4;
+      text-decoration: none;
+      margin-left: 25px;
+      display: inline-block;
+      margin-bottom: 10px;
+    }
+    a:hover {
+      color: #00e5ff;
+    }
+    .progress-bar {
+      background-color: #444;
+      border-radius: 5px;
+      overflow: hidden;
+      margin: 20px 0;
+    }
+    .progress {
+      height: 10px;
+      background-color: #00e676;
+    }
+    footer {
+      text-align: center;
+      margin-top: 50px;
+      font-size: 0.9em;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Painel Galaxy S22 – XinaBox</h1>
+  <p><strong>Dispositivo:</strong> SM-S901E | <strong>Origem:</strong> ZTO (Brasil) | <strong>Operadora:</strong> Vivo</p>
+  <p><strong>Relatório técnico:</strong> <a href="relatorio-inicial.html">📄 Ver relatório</a></p>
+</header>
+
+<h2>⚠️ Pontos Críticos</h2>
+
+<div class="card">
+  <label><input type="checkbox"> SELinux inicia permissivo no boot (risco mitigado sem root ou apps suspeitos)</label>
+  <p class="resumo">Verificado via getenforce: modo enforcing ativo.</p>
+  <a href="selinux.html">🔍 Ver análise completa</a>
+</div>
+
+<div class="card">
+  <label><input type="checkbox"> NetGuard interfere na visibilidade de rede</label>
+  <p class="resumo">Testado com NetGuard desativado: operadora identificada corretamente.</p>
+  <a href="netguard.html">🔍 Ver análise completa</a>
+</div>
+
+<div class="card">
+  <label><input type="checkbox"> Operadora não identificada com SIM ativo</label>
+  <p class="resumo">Após reinício e coleta, PLMN foi reconhecido como Vivo.</p>
+  <a href="operadora.html">🔍 Ver análise completa</a>
+</div>
+
+<div class="card">
+  <label><input type="checkbox"> Políticas de memória podem mascarar apps</label>
+  <p class="resumo">Swappiness ajustado para 60. ZRAM monitorado com `top` e `lsof`.</p>
+  <a href="memoria.html">🔍 Ver análise completa</a>
+</div>
+
+<div class="card">
+  <label><input type="checkbox"> Telemetria interna ativa e extensa</label>
+  <p class="resumo">Perfetto e statsd desativados temporariamente. Logs coletados.</p>
+  <a href="telemetria.html">🔍 Ver análise completa</a>
+</div>
+
+<h2>📊 Progresso da Auditoria</h2>
+<div class="progress-bar"><div class="progress" style="width: 100%;"></div></div>
+<p>5/5 pontos críticos analisados</p>
+
+<footer>
+  Projeto XinaBox | Painel Galaxy S22 | Última atualização: 23/09/2025
+</footer>
+
+</body>
+</html>

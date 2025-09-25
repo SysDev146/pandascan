@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Relatório Técnico – Galaxy S22</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #fafafa;
+      color: #333;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+    .container {
+      display: flex;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    nav {
+      width: 220px;
+      background-color: #f4f4f4;
+      padding: 20px;
+      border-right: 1px solid #ddd;
+      position: sticky;
+      top: 0;
+      height: 100vh;
+    }
+    nav h3 {
+      font-size: 1.1em;
+      margin-bottom: 15px;
+    }
+    nav ul {
+      list-style: none;
+      padding: 0;
+    }
+    nav li {
+      margin-bottom: 10px;
+    }
+    nav a {
+      text-decoration: none;
+      color: #00796b;
+      font-size: 0.95em;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    main {
+      flex: 1;
+      padding: 40px;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    h1 {
+      font-size: 2.2em;
+      color: #00796b;
+    }
+    h2 {
+      color: #37474f;
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 5px;
+      margin-top: 40px;
+    }
+    .meta-box {
+      background: #e0f2f1;
+      border: 1px solid #b2dfdb;
+      padding: 15px;
+      margin-bottom: 30px;
+      border-radius: 6px;
+      font-size: 0.95em;
+    }
+    .meta-box table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    .meta-box th, .meta-box td {
+      padding: 6px 10px;
+      text-align: left;
+    }
+    .meta-box th {
+      color: #00796b;
+      width: 120px;
+    }
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    li {
+      margin-bottom: 8px;
+    }
+    li::before {
+      content: "•";
+      margin-right: 8px;
+      color: #00796b;
+      font-weight: bold;
+    }
+    .alert::before {
+      content: "⚠️";
+      margin-right: 8px;
+      color: #d32f2f;
+    }
+    .ok::before {
+      content: "✅";
+      margin-right: 8px;
+      color: #388e3c;
+    }
+    .links {
+      margin-top: 15px;
+    }
+    .links a {
+      display: inline-block;
+      margin: 3px 8px 0 0;
+      padding: 5px 10px;
+      text-decoration: none;
+      background-color: #00796b;
+      color: white;
+      border-radius: 4px;
+      font-size: 0.85em;
+    }
+    .links a:hover {
+      background-color: #004d40;
+    }
+    footer {
+      text-align: center;
+      margin-top: 50px;
+      font-size: 0.85em;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <nav>
+    <h3>📑 Seções</h3>
+    <ul>
+      <li><a href="#seguranca">Segurança & Boot</a></li>
+      <li><a href="#rede">Rede & Firewall</a></li>
+      <li><a href="#desempenho">Desempenho & Memória</a></li>
+      <li><a href="#multimidia">Gráficos & Multimídia</a></li>
+      <li><a href="#sistema">Sistema & Build</a></li>
+      <li><a href="#criticos">Pontos Críticos</a></li>
+      <li><a href="#acoes">O que fazer agora</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <header>
+      <h1>Relatório Técnico – Galaxy S22 (SM-S901E)</h1>
+    </header>
+
+    <div class="meta-box">
+      <table>
+        <tr><th>Data</th><td>23/09/2025</td></tr>
+        <tr><th>Origem</th><td>ZTO (Brasil)</td></tr>
+        <tr><th>Operadora</th><td>Vivo</td></tr>
+        <tr><th>Versão</th><td>v1</td></tr>
+      </table>
+    </div>
+
+    <h2 id="seguranca">🔐 Segurança & Boot</h2>
+    <ul>
+      <li class="ok">Boot seguro: <code>verifiedbootstate = green</code></li>
+      <li class="ok">Bootloader travado: <code>flash.locked = 1</code></li>
+      <li class="ok">Criptografia ativa (file-based)</li>
+      <li class="alert">SELinux permissivo no boot: <code>ro.boot.selinux = permissive</code></li>
+      <li class="ok">Knox e serviços de criptografia ativos</li>
+    </ul>
+    <div class="links">
+      <a href="seguranca.html">Ver detalhes de Segurança</a>
+    </div>
+
+    <h2 id="rede">🌐 Rede & Firewall</h2>
+    <ul>
+      <li class="ok">DNS over HTTPS ativado</li>
+      <li class="alert">NetGuard ativo (interferência em conexões e UID)</li>
+      <li class="alert">Operadora não identificada com SIM da Vivo</li>
+      <li class="alert">ADB habilitado</li>
+      <li>Redirecionamento de sockets detectado</li>
+    </ul>
+    <div class="links">
+      <a href="rede.html">Ver detalhes de Rede</a>
+    </div>
+
+    <h2 id="desempenho">🧠 Desempenho & Memória</h2>
+    <ul>
+      <li class="alert">Políticas agressivas de memória: <code>swappiness = 130</code></li>
+      <li>ZRAM expandido: 4GB</li>
+      <li>Dexopt otimizado</li>
+      <li>Telemetria ativa: <code>statsd</code>, <code>perfetto</code>, <code>sys.perf.*</code></li>
+    </ul>
+    <div class="links">
+      <a href="desempenho.html">Ver detalhes de Desempenho</a>
+    </div>
+
+    <h2 id="multimidia">🎮 Gráficos & Multimídia</h2>
+    <ul>
+      <li>SurfaceFlinger otimizado (HDR, proteção de conteúdo)</li>
+      <li>Drivers gráficos: Samsung + Qualcomm</li>
+      <li>Áudio & VoIP prontos</li>
+      <li>Câmera pronta, não ativa</li>
+    </ul>
+    <div class="links">
+      <a href="multimidia.html">Ver detalhes de Multimídia</a>
+    </div>
+
+    <h2 id="sistema">📦 Sistema & Build</h2>
+    <ul>
+      <li>Build oficial: <code>release-keys</code>, <code>user</code></li>
+      <li>Android 15 | OneUI 7.0 | Patch: 01/09/2025</li>
+      <li>Treble & VNDK ativos</li>
+      <li>Multisim com suporte a eSIM</li>
+      <li>Criptografia, SELinux, SecureHW e SecureNVM habilitados</li>
+    </ul>
+    <div class="links">
+      <a href="sistema.html">Ver detalhes de Sistema</a>
+    </div>
+
+    <h2 id="criticos">⚠️ Pontos Críticos</h2>
+    <ul>
+      <li class="alert">SELinux permissivo no boot</li>
+      <li class="alert">NetGuard interfere na visibilidade de rede</li>
+      <li class="alert">Operadora não identificada com SIM ativo</li>
+      <li class="alert">Políticas de memória podem mascarar apps</li>
+      <li class="alert">Telemetria interna ativa e extensa</li>
+    </ul>
+
+    <h2 id="acoes">🛠️ O que fazer agora</h2>
+    <ul>
+      <li>Auditar apps com UID privilegiado</li>
+      <li>Monitorar conexões em tempo real (<code>tcpdump</code>, <code>lsof</code>)</li>
+      <li>Testar comportamento com NetGuard desativado</li>
+      <li>Validar SELinux com <code>getenforce</code></li>
+      <li>Correlacionar UID ↔ pacote ↔ tráfego</li>
+    </ul>
+
+    <footer>
+      Projeto PandaScan | Relatório Técnico Galaxy S22 | Última atualização: 23/09/2025
+    </footer>
+  </main>
+</div>
+
+</body>
+</html>

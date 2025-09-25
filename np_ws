@@ -1,0 +1,15 @@
+<NotepadPlus>
+    <Project name="PandaScan">
+        <File name="README v1.0 (Planner).md" />
+        <File name="docs\roadmap.md" />
+        <Folder name="Etapas">
+            <File name="docs\checklist\etapa-0.md" />
+            <File name="docs\checklist\etapa-1.md" />
+        </Folder>
+        <Folder name="Sessoes">
+            <File name="docs\sessoes\2025-09-24_sessao1.md" />
+            <File name="docs\sessoes\2025-09-24_sessao2.md" />
+            <File name="docs\sessoes\2025-09-25_sessao3.md" />
+        </Folder>
+    </Project>
+</NotepadPlus>
